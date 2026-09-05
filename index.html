@@ -1,252 +1,425 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Portfolio of Sejal Patil, a frontend-focused full-stack software engineer building scalable fintech and learning platforms."
-    />
-    <title>Sejal Patil | Software Engineer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="site-header" data-header>
-      <a class="brand" href="#top" aria-label="Sejal Patil home">
-        <span class="brand-mark">SP</span>
-        <span>Sejal Patil</span>
-      </a>
-      <button class="menu-toggle" type="button" aria-label="Open navigation" data-menu-toggle>
-        <span></span>
-        <span></span>
-      </button>
-      <nav class="nav-links" data-nav>
-        <a href="#work">Work</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sejal Patil — Frontend-focused full-stack software engineer specializing in fintech payment systems and scalable web applications." />
+  <title>Sejal Patil | Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="scroll-bar" aria-hidden="true"></div>
 
-    <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
-        <img class="hero-image" src="assets/fintech-hero.png" alt="" />
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-          <p class="eyebrow">Software Development Engineer II</p>
-          <h1 id="hero-title">Hi, I'm Sejal Patil.</h1>
-          <p class="hero-subtitle">Frontend-focused full-stack engineer for fintech and edtech products.</p>
-          <p class="hero-copy">
-            I build clean, scalable web applications with React, Next.js, TypeScript, FastAPI, and
-            Python. Recently, I owned the frontend for a payment gateway platform processing 80+
-            transactions per second.
+  <!-- Page loader -->
+  <div class="page-loader" id="loader" aria-hidden="true">
+    <div class="loader-mark">SP</div>
+    <div class="loader-bar"><div class="loader-fill"></div></div>
+    <span class="loader-text">Initializing...</span>
+  </div>
+
+  <!-- Ambient background -->
+  <div class="bg-layer" aria-hidden="true">
+    <div class="bg-grid"></div>
+    <div class="bg-blob bg-blob-1"></div>
+    <div class="bg-blob bg-blob-2"></div>
+    <div class="bg-blob bg-blob-3"></div>
+  </div>
+
+  <!-- Custom cursor -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <!-- ═══ HEADER ═══ -->
+  <header class="site-header" data-header>
+    <a class="brand" href="#top" aria-label="Sejal Patil — home">
+      <div class="brand-mark">
+        <span>SP</span>
+        <div class="brand-pulse"></div>
+      </div>
+      <span class="brand-name">Sejal Patil</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Open navigation" data-menu-toggle>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="nav-links" data-nav>
+      <a href="#work">Work</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-cta" href="assets/sejal-patil-resume.pdf" target="_blank" rel="noreferrer">Resume ↗</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ═══ HERO ═══ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <!-- Particle network canvas -->
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+      <div class="hero-inner">
+        <!-- Boot sequence -->
+        <div class="boot-console" aria-label="System initializing">
+          <span class="boot-line"><span class="boot-ok">[✓]</span> sejal.sys initialized</span>
+          <span class="boot-line"><span class="boot-arrow">[→]</span> Loading payment modules... <span class="boot-ok">done</span></span>
+          <span class="boot-line"><span class="boot-ok">[✓]</span> 80+ TPS gateway interface: <span class="boot-ok">ready</span></span>
+          <span class="boot-line"><span class="boot-arrow">[→]</span> Awaiting connection<span class="boot-cursor"> _</span></span>
+        </div>
+
+        <!-- Headline -->
+        <div class="hero-headline">
+          <span class="hero-kicker">Software Development Engineer II · Fintech &amp; Edtech</span>
+          <h2 id="hero-title">
+            I build the<br>
+            <span class="gradient-text scramble-target" data-scramble="financial web">financial web</span><br>
+            layer by layer.
+          </h>
+          <p class="hero-sub">
+            Frontend-focused full-stack engineer shipping payment gateways, learning platforms, and real-time systems that scale.
           </p>
-          <div class="hero-highlights" aria-label="Portfolio highlights">
-            <span>Founding team member</span>
-            <span>Payment gateway frontend owner</span>
-            <span>10k+ daily visitors supported</span>
-          </div>
-          <div class="hero-actions" aria-label="Primary actions">
-            <a class="button primary" href="mailto:patilsejal8088@gmail.com">Email Me</a>
-            <a class="button secondary" href="https://linkedin.com/in/sejal-patil-102b61223" target="_blank" rel="noreferrer">
-              LinkedIn
-            </a>
-            <a class="button secondary" href="assets/sejal-patil-resume.pdf" target="_blank" rel="noreferrer">
-              Resume
-            </a>
-          </div>
         </div>
-      </section>
 
-      <section class="proof-band" aria-label="Career highlights">
-        <div class="proof-item">
-          <strong>80+</strong>
-          <span>transactions per second engineered for payment flows</span>
-        </div>
-        <div class="proof-item">
-          <strong>10k+</strong>
-          <span>daily visitors supported on production web platforms</span>
-        </div>
-        <div class="proof-item">
-          <strong>300k+</strong>
-          <span>enrolled users supported across learning systems</span>
-        </div>
-        <div class="proof-item">
-          <strong>1k+</strong>
-          <span>daily assignment submissions handled by automated evaluation</span>
-        </div>
-      </section>
-
-      <section class="section intro-section" aria-labelledby="intro-title">
-        <div class="section-kicker">Profile</div>
-        <div class="intro-grid">
-          <h2 id="intro-title">A frontend owner who can move comfortably across the stack.</h2>
-          <div class="intro-copy">
-            <p>
-              I build responsive, scalable, high-performance web applications with clean component
-              architecture, strong API integration, and product-minded delivery.
-            </p>
-            <p>
-              At a fintech startup, I joined as a founding team member and single-handedly owned the
-              full frontend for a payment gateway platform while contributing to backend service logic.
-            </p>
+        <!-- Metrics strip -->
+        <div class="hero-metrics">
+          <div class="metric-card">
+            <span class="metric-num"><span class="counter" data-target="80">0</span>+</span>
+            <span class="metric-label">transactions / second</span>
+          </div>
+          <div class="metric-sep" aria-hidden="true"></div>
+          <div class="metric-card">
+            <span class="metric-num"><span class="counter" data-target="10">0</span>k+</span>
+            <span class="metric-label">daily visitors</span>
+          </div>
+          <div class="metric-sep" aria-hidden="true"></div>
+          <div class="metric-card">
+            <span class="metric-num"><span class="counter" data-target="300">0</span>k+</span>
+            <span class="metric-label">enrolled users</span>
+          </div>
+          <div class="metric-sep" aria-hidden="true"></div>
+          <div class="metric-card">
+            <span class="metric-num"><span class="counter" data-target="1">0</span>k+</span>
+            <span class="metric-label">daily submissions</span>
           </div>
         </div>
-      </section>
 
-      <section class="section timeline-section" id="work" aria-labelledby="work-title">
-        <div class="section-kicker">Experience</div>
-        <h2 id="work-title">Built where reliability, speed, and trust matter.</h2>
-        <div class="timeline">
-          <article class="role">
-            <div class="role-meta">
-              <span>Feb 2025 - Present</span>
-              <span>Bangalore, India</span>
+        <!-- CTAs -->
+        <div class="hero-actions">
+          <a class="btn btn-primary magnetic" href="mailto:patilsejal8088@gmail.com">
+            Get in touch <span class="btn-arrow">→</span>
+          </a>
+          <a class="btn btn-outline magnetic" href="#work">See my work</a>
+          <a class="btn btn-ghost magnetic" href="https://linkedin.com/in/sejal-patil-102b61223" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        </div>
+
+        <!-- Scroll cue -->
+        <div class="scroll-hint" aria-hidden="true">
+          <div class="scroll-line"></div>
+          <span>scroll</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ MARQUEE STRIP ═══ -->
+    <div class="marquee-strip" aria-hidden="true">
+      <div class="marquee-track">
+        <span>React.js</span><span class="marquee-dot">·</span>
+        <span>TypeScript</span><span class="marquee-dot">·</span>
+        <span>Next.js</span><span class="marquee-dot">·</span>
+        <span>FastAPI</span><span class="marquee-dot">·</span>
+        <span>Payment Gateways</span><span class="marquee-dot">·</span>
+        <span>Tailwind CSS</span><span class="marquee-dot">·</span>
+        <span>WebSockets</span><span class="marquee-dot">·</span>
+        <span>Amazon SQS</span><span class="marquee-dot">·</span>
+        <span>Redux Toolkit</span><span class="marquee-dot">·</span>
+        <span>Python</span><span class="marquee-dot">·</span>
+        <span>REST APIs</span><span class="marquee-dot">·</span>
+        <span>Axis Bank API</span><span class="marquee-dot">·</span>
+        <!-- duplicate for seamless loop -->
+        <span>React.js</span><span class="marquee-dot">·</span>
+        <span>TypeScript</span><span class="marquee-dot">·</span>
+        <span>Next.js</span><span class="marquee-dot">·</span>
+        <span>FastAPI</span><span class="marquee-dot">·</span>
+        <span>Payment Gateways</span><span class="marquee-dot">·</span>
+        <span>Tailwind CSS</span><span class="marquee-dot">·</span>
+        <span>WebSockets</span><span class="marquee-dot">·</span>
+        <span>Amazon SQS</span><span class="marquee-dot">·</span>
+        <span>Redux Toolkit</span><span class="marquee-dot">·</span>
+        <span>Python</span><span class="marquee-dot">·</span>
+        <span>REST APIs</span><span class="marquee-dot">·</span>
+        <span>Axis Bank API</span><span class="marquee-dot">·</span>
+      </div>
+    </div>
+
+    <!-- ═══ ABOUT ═══ -->
+    <section class="section about-section" aria-labelledby="about-title">
+      <span class="section-num" aria-hidden="true">01</span>
+      <div class="section-inner">
+        <div class="section-tag">Profile</div>
+        <div class="about-grid">
+          <div class="about-left reveal">
+            <h2 id="about-title">
+              A frontend owner who moves<br>
+              <span class="gradient-text">fluidly across the stack.</span>
+            </h2>
+          </div>
+          <div class="about-right reveal">
+            <div class="glass-card about-card spotlight-card">
+              <p>I build responsive, scalable, high-performance web applications with clean component architecture, strong API integration, and product-minded delivery.</p>
+              <p>At a fintech startup, I joined as a founding team member and single-handedly owned the full frontend for a payment gateway platform — from architecture decisions to production deployment.</p>
+              <div class="about-badges">
+                <span class="badge">Founding Team Member</span>
+                <span class="badge badge-amber">Payment Gateway Owner</span>
+                <span class="badge badge-purple">Open to Opportunities</span>
+              </div>
             </div>
-            <div class="role-body">
-              <h3>Software Development Engineer II, Founding Team Member</h3>
-              <p class="company">Bluswap / FastFlowPe - Finex Payment Solutions</p>
-              <ul>
-                <li>Owned the complete frontend from architecture to deployment for a payment gateway platform.</li>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ EXPERIENCE ═══ -->
+    <section class="section experience-section" id="work" aria-labelledby="work-title">
+      <span class="section-num" aria-hidden="true">02</span>
+      <div class="section-inner">
+        <div class="section-tag">Transaction Log</div>
+        <h2 id="work-title" class="reveal">
+          Built where reliability,<br>
+          <span class="gradient-text">speed and trust</span> matter.
+        </h2>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="tl-connector" aria-hidden="true">
+              <div class="tl-dot tl-dot-active">
+                <span class="live-badge">LIVE</span>
+              </div>
+              <div class="tl-line"></div>
+            </div>
+            <div class="glass-card timeline-card tilt-card spotlight-card">
+              <div class="tl-top">
+                <div class="tl-meta">
+                  <span class="tl-date">Feb 2025 — Present</span>
+                  <span class="tl-loc">Bangalore, India</span>
+                </div>
+                <span class="status-pill status-live">● Active</span>
+              </div>
+              <h3>Software Development Engineer II</h3>
+              <p class="role-company">Bluswap / FastFlowPe — Finex Payment Solutions</p>
+              <p class="role-tag">Founding Team Member</p>
+              <ul class="role-list">
+                <li>Owned the complete frontend from architecture to deployment for a payment gateway platform handling 80+ TPS.</li>
                 <li>Built secure Payin and Payout flows for customer-to-merchant and merchant-to-vendor transactions.</li>
-                <li>Integrated Axis Bank APIs and payment service providers for secure fund movement.</li>
+                <li>Integrated Axis Bank APIs and payment service providers for secure, real-time fund movement.</li>
                 <li>Delivered wallet management, bill-payment, QR transactions, and D2C checkout experiences.</li>
               </ul>
+              <div class="tech-pills">
+                <span>React</span><span>TypeScript</span><span>Tailwind CSS</span><span>Payment APIs</span><span>Axis Bank API</span>
+              </div>
             </div>
           </article>
 
-          <article class="role">
-            <div class="role-meta">
-              <span>Oct 2023 - Feb 2025</span>
-              <span>Bangalore, India</span>
+          <article class="timeline-item reveal">
+            <div class="tl-connector" aria-hidden="true">
+              <div class="tl-dot"></div>
             </div>
-            <div class="role-body">
+            <div class="glass-card timeline-card tilt-card spotlight-card">
+              <div class="tl-top">
+                <div class="tl-meta">
+                  <span class="tl-date">Oct 2023 — Feb 2025</span>
+                  <span class="tl-loc">Bangalore, India</span>
+                </div>
+                <span class="status-pill status-done">✓ Shipped</span>
+              </div>
               <h3>Full Stack Developer</h3>
-              <p class="company">Physics Wallah</p>
-              <ul>
-                <li>Built the frontend of the PW Skills website in React.js for 10,000+ daily visitors.</li>
+              <p class="role-company">Physics Wallah</p>
+              <ul class="role-list">
+                <li>Built the frontend of PW Skills for 10,000+ daily visitors with optimised performance.</li>
                 <li>Improved load times with lazy loading and code splitting across high-traffic views.</li>
                 <li>Implemented real-time WebSocket features for instant feedback and notifications.</li>
                 <li>Integrated AI-powered grading capabilities through RESTful APIs with backend teams.</li>
               </ul>
+              <div class="tech-pills">
+                <span>React.js</span><span>WebSockets</span><span>FastAPI</span><span>Amazon SQS</span><span>Python</span>
+              </div>
             </div>
           </article>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="section projects-section" id="projects" aria-labelledby="projects-title">
-        <div class="section-heading">
-          <div>
-            <div class="section-kicker">Selected Work</div>
-            <h2 id="projects-title">Projects with clear product impact.</h2>
-          </div>
-          <p>
-            Focused builds across payments, checkout, LMS automation, and service communication.
-          </p>
+    <!-- ═══ PROJECTS ═══ -->
+    <section class="section projects-section" id="projects" aria-labelledby="projects-title">
+      <span class="section-num" aria-hidden="true">03</span>
+      <div class="section-inner">
+        <div class="section-tag">Deployed Systems</div>
+        <div class="projects-header">
+          <h2 id="projects-title" class="reveal">
+            Systems built for<br><span class="gradient-text">real-world scale.</span>
+          </h2>
+          <p class="reveal">Production software with real numbers behind every line of code.</p>
         </div>
 
-        <div class="project-grid">
-          <article class="project-card accent-teal">
-            <div class="card-topline">
-              <span>Fintech</span>
-              <span>React / TypeScript / Tailwind</span>
+        <div class="projects-grid">
+          <article class="glass-card project-card tilt-card spotlight-card reveal">
+            <div class="proj-num-bg" aria-hidden="true">01</div>
+            <div class="proj-cat">Fintech · React / TypeScript / Tailwind</div>
+            <h3 class="proj-name">Digital Payment Platform</h3>
+            <p class="proj-desc">Complete frontend for a payment gateway processing 80+ transactions per second. Built responsive payment interfaces connected to banking and PSP APIs for real-time transactions, balance checks, account linking, and checkout flows.</p>
+            <div class="proj-stats">
+              <div class="proj-stat">
+                <span class="proj-stat-num">80+</span>
+                <span class="proj-stat-label">TPS</span>
+              </div>
+              <div class="proj-stat">
+                <span class="proj-stat-num">4+</span>
+                <span class="proj-stat-label">Payment flows</span>
+              </div>
             </div>
-            <h3>Digital Payment Platform</h3>
-            <p>
-              Responsive payment interfaces connected to banking and PSP APIs for real-time
-              transactions, balance checks, account linking, and checkout.
-            </p>
-            <div class="tag-row">
-              <span>Payin</span>
-              <span>Payout</span>
-              <span>Wallets</span>
-              <span>QR Payments</span>
+            <div class="proj-tags">
+              <span>Payin</span><span>Payout</span><span>Wallets</span><span>QR Payments</span><span>D2C Checkout</span>
             </div>
+            <div class="proj-glow proj-glow-teal" aria-hidden="true"></div>
           </article>
 
-          <article class="project-card accent-coral">
-            <div class="card-topline">
-              <span>Edtech</span>
-              <span>FastAPI / SQS / WebSockets</span>
+          <article class="glass-card project-card tilt-card spotlight-card reveal">
+            <div class="proj-num-bg" aria-hidden="true">02</div>
+            <div class="proj-cat">Edtech · FastAPI / SQS / WebSockets</div>
+            <h3 class="proj-name">Learning Management System</h3>
+            <p class="proj-desc">AI-powered automated evaluation and asynchronous backend communication supporting high-volume submissions, 10k+ daily visits, and 300k+ enrolled learners with real-time WebSocket feedback throughout.</p>
+            <div class="proj-stats">
+              <div class="proj-stat">
+                <span class="proj-stat-num">300k+</span>
+                <span class="proj-stat-label">Users</span>
+              </div>
+              <div class="proj-stat">
+                <span class="proj-stat-num">1k+</span>
+                <span class="proj-stat-label">Daily submissions</span>
+              </div>
             </div>
-            <h3>Learning Management System</h3>
-            <p>
-              AI-powered automated evaluation and asynchronous backend communication supporting
-              high-volume submissions, visits, and enrolled learners.
-            </p>
-            <div class="tag-row">
-              <span>AI Grading</span>
-              <span>Amazon SQS</span>
-              <span>REST APIs</span>
-              <span>Scale</span>
+            <div class="proj-tags">
+              <span>AI Grading</span><span>Amazon SQS</span><span>REST APIs</span><span>WebSockets</span><span>Scale</span>
             </div>
+            <div class="proj-glow proj-glow-purple" aria-hidden="true"></div>
           </article>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="section skills-section" id="skills" aria-labelledby="skills-title">
-        <div class="section-kicker">Skills</div>
-        <h2 id="skills-title">Tools I use to ship reliable interfaces and services.</h2>
+    <!-- ═══ SKILLS ═══ -->
+    <section class="section skills-section" id="skills" aria-labelledby="skills-title">
+      <span class="section-num" aria-hidden="true">04</span>
+      <div class="section-inner">
+        <div class="section-tag">Core Modules</div>
+        <h2 id="skills-title" class="reveal">
+          The stack that ships<br>
+          <span class="gradient-text">reliable interfaces.</span>
+        </h2>
         <div class="skills-grid">
-          <div class="skill-group">
+          <div class="glass-card skill-group spotlight-card reveal">
+            <div class="skill-icon" aria-hidden="true">⚡</div>
             <h3>Frontend</h3>
-            <p>React.js, Next.js, TypeScript, JavaScript ES6+, Redux Toolkit, Tailwind CSS, Material UI, HTML5, CSS3</p>
+            <div class="skill-tags">
+              <span>React.js</span><span>Next.js</span><span>TypeScript</span>
+              <span>JavaScript ES6+</span><span>Redux Toolkit</span><span>Tailwind CSS</span>
+              <span>Material UI</span><span>HTML5</span><span>CSS3</span>
+            </div>
           </div>
-          <div class="skill-group">
+          <div class="glass-card skill-group spotlight-card reveal">
+            <div class="skill-icon" aria-hidden="true">🔧</div>
             <h3>Backend</h3>
-            <p>FastAPI, Python, RESTful APIs, WebSockets, Amazon SQS, payment API integration</p>
+            <div class="skill-tags">
+              <span>FastAPI</span><span>Python</span><span>RESTful APIs</span>
+              <span>WebSockets</span><span>Amazon SQS</span><span>Payment APIs</span>
+            </div>
           </div>
-          <div class="skill-group">
+          <div class="glass-card skill-group spotlight-card reveal">
+            <div class="skill-icon" aria-hidden="true">🛠</div>
             <h3>Practices</h3>
-            <p>Git, Bitbucket, Agile/Scrum, performance optimization, code splitting, lazy loading, custom component design</p>
+            <div class="skill-tags">
+              <span>Git</span><span>Bitbucket</span><span>Agile / Scrum</span>
+              <span>Performance Optimization</span><span>Code Splitting</span>
+              <span>Lazy Loading</span><span>Component Design</span>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="section education-section" aria-labelledby="education-title">
-        <div class="section-kicker">Education</div>
-        <div class="education-panel">
-          <div>
-            <h2 id="education-title">Bachelor's in Computer Application</h2>
-            <p>People Tree Education Society, Belgaum</p>
+    <!-- ═══ EDUCATION ═══ -->
+    <section class="section education-section" aria-labelledby="education-title">
+      <span class="section-num" aria-hidden="true">05</span>
+      <div class="section-inner">
+        <div class="section-tag">Academic Base</div>
+        <div class="glass-card education-card spotlight-card reveal">
+          <div class="edu-info">
+            <h2 id="education-title">Bachelor's in<br>Computer Application</h2>
+            <p class="edu-school">People Tree Education Society, Belgaum</p>
+            <span class="edu-year">2019 — 2022</span>
           </div>
-          <div class="education-score">
-            <strong>79%</strong>
-            <span>2019 - 2022</span>
+          <div class="edu-score" aria-label="Score: 79 percent">
+            <span class="score-num">79<span class="score-pct">%</span></span>
+            <span class="score-label">Academic Score</span>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="contact-section" id="contact" aria-labelledby="contact-title">
-        <div>
-          <p class="eyebrow">Available for strong product teams</p>
-          <h2 id="contact-title">Let's build web experiences that feel fast, dependable, and thoughtfully made.</h2>
+    <!-- ═══ CONTACT ═══ -->
+    <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+      <span class="section-num" aria-hidden="true">06</span>
+      <div class="section-inner">
+        <div class="section-tag">Establish Connection</div>
+        <div class="contact-inner">
+          <h2 id="contact-title" class="reveal">
+            Let's build something<br>
+            <span class="gradient-text">fast, dependable,<br>and thoughtfully made.</span>
+          </h2>
+          <p class="contact-sub reveal">Available for full-time roles and strong product teams.</p>
+
+          <div class="glass-card contact-terminal reveal spotlight-card" aria-label="Contact details">
+            <div class="term-header" aria-hidden="true">
+              <span class="term-dot td-red"></span>
+              <span class="term-dot td-yellow"></span>
+              <span class="term-dot td-green"></span>
+              <span class="term-title">sejal@portfolio ~ connect</span>
+            </div>
+            <div class="term-body">
+              <p><span class="t-prompt">$</span> <span class="t-cmd">ping</span> patilsejal8088@gmail.com</p>
+              <p class="t-res">[✓] Connection established — ready to collaborate</p>
+              <p class="t-blank">&nbsp;</p>
+              <p><span class="t-prompt">$</span> <span class="t-cmd">open</span> linkedin.com/in/sejal-patil-102b61223</p>
+              <p class="t-res">[→] Profile loaded — let's connect</p>
+              <p class="t-blank">&nbsp;</p>
+              <p><span class="t-prompt">$</span> <span class="t-cmd">download</span> sejal-patil-resume.pdf<span class="boot-cursor"> _</span></p>
+            </div>
+          </div>
+
+          <div class="contact-actions reveal">
+            <a class="btn btn-primary magnetic" href="mailto:patilsejal8088@gmail.com">Email Me <span class="btn-arrow">→</span></a>
+            <a class="btn btn-outline magnetic" href="https://linkedin.com/in/sejal-patil-102b61223" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+            <a class="btn btn-outline magnetic" href="tel:+918310610495">+91 83106 10495</a>
+            <a class="btn btn-ghost magnetic" href="assets/sejal-patil-resume.pdf" target="_blank" rel="noreferrer">Resume PDF ↗</a>
+          </div>
         </div>
-        <div class="contact-actions">
-          <a class="button primary" href="mailto:patilsejal8088@gmail.com">patilsejal8088@gmail.com</a>
-          <a class="button secondary" href="tel:+918310610495">+91 8310610495</a>
-          <a class="button secondary" href="assets/sejal-patil-resume.pdf" target="_blank" rel="noreferrer">Resume PDF</a>
-        </div>
-        <!-- <p class="portfolio-url">
-          Portfolio:
-          <a href="https://sejal-patil-portfolio.wtpl-8469.chatgpt.site" target="_blank" rel="noreferrer">
-            sejal-patil-portfolio.wtpl-8469.chatgpt.site
-          </a>
-        </p> -->
-      </section>
-    </main>
+      </div>
+    </section>
 
-    <footer class="site-footer">
-      <span>Sejal Patil</span>
-      <span>Bangalore, Karnataka</span>
-    </footer>
+  </main>
 
-    <script src="script.js"></script>
-  </body>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-name">Sejal Patil</span>
+        <span class="footer-loc">Bangalore, Karnataka · India</span>
+      </div>
+      <!-- <p class="footer-copy">Built with precision. © 2025</p> -->
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
