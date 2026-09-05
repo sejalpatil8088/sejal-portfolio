@@ -490,6 +490,19 @@ ul {
   color: var(--ink);
 }
 
+.portfolio-url {
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 700;
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
+.portfolio-url a {
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+
 .site-footer {
   align-items: center;
   background: var(--charcoal);
